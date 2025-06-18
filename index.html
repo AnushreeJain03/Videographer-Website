@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Loading the jquery via CDN and download should CDN be unavailable -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="text/javascript">
+    if (typeof jQuery == 'undefined') {
+        document.write(unescape("%3Cscript src='/js/jquery-3.7.1.min.js' type='text/javascript'%3E%3C/script%3E"));
+    }
+    </script>
+
+    <!-- Page title -->
+    <title>Joe Morikawa | Videography </title>
+
+    <!-- Linking stylesheet and font embed -->
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- nav bar code -->
+    <div id="nav-placeholder"></div>
+    <script>
+        $.get("header/nav.html", function(data){
+            $("#nav-placeholder").replaceWith(data);
+        });
+    </script>
+
+    <!-- Hero Section -->
+    <div id="hero-section">
+        
+        <video class="background-video" onclick="this.pause()" autoplay loop muted>
+            <source src="/assets/videos/video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <div class="overlay"></div>
+
+        <div class="title-text-container">
+            <h1 class="title">Joe Morikawa</h1>
+            <p class="main-description">Professional Videography specialising in sport, music and lifestyle videos. Professional sports videography, no respect for his friends or anyone other than himself, peaches and oranges and swift combination</p>
+        </div>
+        
+    </div>
+
+    <div id="portfolio-section">
+        <div class="triangle"></div>
+
+        <h1 class="title">Portfolio</h1>
+        <div class="portfolio-card"></div>
+        <div class="portfolio-card"></div>
+        <div class="portfolio-card"></div>
+    </div>
+
+    <div>
+        <h1 class="title">About</h1>
+        <img src="" alt="">
+        <p></p>
+    </div>
+
+    <footer>
+        
+    </footer>
+
+
+</body>
+</html>

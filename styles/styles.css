@@ -1,0 +1,173 @@
+body{
+    margin: 0;
+    font-family: "Josefin Sans";
+}
+
+.josefin-sans-font {
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+/* -----------navbar styling --------- */
+#nav-container{
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    max-width: 100%;
+}
+
+#nav-link-container{
+    display: flex;
+}
+
+.nav-link{
+    color: white;
+    list-style-type: none;
+    padding: 1.9rem;
+    padding-right: 3rem;
+    font-family: "Josefin Sans";
+    font-weight: 200;
+    font-size: 1.2rem;
+}
+
+#icon-container{
+    display: flex;
+    align-items: center;
+}
+
+.icon{
+    height: 55%;
+    padding-left: 3rem;
+    stroke: orange;
+}
+
+#insta-icon{
+    height: 45%;
+}
+
+
+/* Medium devices (landscape tablets, 768px and down) */
+@media only screen and (max-width: 768px) {
+    .tablet-hidden {
+        display: none !important;
+    }   
+
+    #nav-container{
+        justify-content: center;
+    }
+
+    #nav-link-container{
+        justify-content: end;
+
+    }
+
+    .icon{
+        flex-shrink: 1;
+    }
+} 
+
+
+
+@media only screen and (max-width: 545px) {
+    /* the navigation switches to a button that you click */
+
+    #nav-container{
+        background-color: blue;
+    }
+
+
+}
+
+
+
+/*  --------------- STYLING FOR HOME -------------- */
+
+
+/* Hero Section */
+
+#hero-section{
+    position: relative;
+}
+
+
+#hero-section .title-text-container{
+    position: absolute;
+    top: 35%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    color: white;
+    z-index: 2;
+}
+
+.title-text-container .title{
+    font-weight: 500;
+    font-size: 9vw;
+}
+
+.title-text-container .main-description{
+    font-weight: lighter;
+    font-style: italic;
+}
+
+
+.background-video{
+    width: 100%;
+    max-height: 90vh;
+    min-height: 90vh;
+    object-fit: cover;
+}
+
+.overlay {
+  position: absolute; 
+  width: 100%; 
+  height: 99%; 
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5); 
+  z-index: 1; 
+}
+
+
+
+/* portfolio cards */
+
+/* on hover remove text and play video */
+
+
+/* About section */
+
+
+
+
+/*  --------------- STYLING FOR PORTFOLO -------------- */
+
+#portfolio-section{
+    background-color: white;
+    position: relative;
+    z-index: 1;
+}
+
+.triangle {
+	width: 0;
+	height: 1px;
+	border-top: 20vh solid transparent;
+	border-right: 100vw solid #ffffff;
+    top: -20vh;
+    z-index: 1; 
+    position: relative;
+}
+
+
+
+/*  ------------- STYLING FOR ABOUT -------------------- */
+
+
+
+/*  ------------ STYLING FOR CONTACT SECTION ----------- */
+
+
