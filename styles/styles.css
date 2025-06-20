@@ -1,6 +1,7 @@
 body{
     margin: 0;
     font-family: "Josefin Sans";
+    background-color: rgb(255, 255, 255);
 }
 
 .josefin-sans-font {
@@ -19,62 +20,42 @@ body{
     max-width: 100%;
 }
 
+
+/* Styling the nav links */
 #nav-link-container{
     display: flex;
+    list-style: none;
 }
 
 .nav-link{
     color: white;
     list-style-type: none;
-    padding: 1.9rem;
+    padding: 1rem;
     padding-right: 3rem;
+    overflow: hidden;
     font-family: "Josefin Sans";
     font-weight: 200;
     font-size: 1.2rem;
 }
 
+/* Styling the icons */
 #icon-container{
     display: flex;
     align-items: center;
 }
 
 .icon{
-    height: 55%;
+    height: 45%;
     padding-left: 3rem;
     stroke: orange;
 }
 
 #insta-icon{
-    height: 45%;
+    height: 40%;
 }
 
-
-/* Medium devices (landscape tablets, 768px and down) */
-@media only screen and (max-width: 768px) {
-    .tablet-hidden {
-        display: none !important;
-    }   
-
-    #nav-container{
-        justify-content: center;
-    }
-
-
-    .icon{
-        flex-shrink: 1;
-    }
-} 
-
-
-
-@media only screen and (max-width: 545px) {
-    /* the navigation switches to a button that you click */
-
-    #nav-container{
-        background-color: blue;
-    }
-
-
+#hamburger{
+    display: none;
 }
 
 
@@ -88,7 +69,6 @@ body{
     position: relative;
 }
 
-
 #hero-section .title-text-container{
     position: absolute;
     top: 35%;
@@ -96,16 +76,19 @@ body{
     transform: translate(-50%, -50%);
     color: white;
     z-index: 2;
+    width: 70%;
 }
 
 .title-text-container .title{
     font-weight: 500;
     font-size: 9vw;
+    margin-bottom: -1%;
 }
 
 .title-text-container .main-description{
     font-weight: lighter;
     font-style: italic;
+    font-size: large;
 }
 
 
@@ -119,7 +102,7 @@ body{
 .overlay {
   position: absolute; 
   width: 100%; 
-  height: 99%; 
+  height: 500%; 
   top: 0;
   left: 0;
   right: 0;
@@ -166,4 +149,95 @@ body{
 
 /*  ------------ STYLING FOR CONTACT SECTION ----------- */
 
+
+
+
+/*  ------------ STYLING FOR CONTACT SECTION ----------- */
+
+
+
+
+
+
+/*  ------------ STYLING FOR tablet ----------- */
+
+/* Medium devices (landscape tablets, 768px and down) */
+@media only screen and (max-width: 768px) {
+    .tablet-hidden {
+        display: none !important;
+    }   
+
+    #nav-container{
+        justify-content: center;
+    }
+
+    #hero-section .title-text-container{
+        width: 70%;
+        left: 50%;
+    }
+
+    .icon{
+        flex-shrink: 1;
+    }
+
+} 
+
+/*  ------------ STYLING FOR Mobile ----------- */
+
+/* Mobile devices 545px and down */
+@media only screen and (max-width: 525px) {
+
+    /* nav overriding */
+    #nav-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 999; 
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #hamburger {
+        display: inline;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        border: none;
+        background: rgb(0, 0, 0);
+        padding: 5px 10px;
+        color: rgb(255, 255, 255);
+        font-size: 2rem;
+        cursor: pointer;
+        z-index: 1000;
+        mix-blend-mode: difference;
+        border-radius: 5px;
+    }
+
+    #nav-link-container {
+        display: none;
+        position: absolute;
+        right: 0;
+        background-color: black;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #nav-link-container.active {
+        display: flex;
+    }
+
+
+    /* Home styling */
+    #hero-section .title-text-container{
+    position: absolute;
+    
+    transform: translate(-50%, -50%);
+    color: white;
+    z-index: 2;
+    top: 40%;
+}
+}
 
