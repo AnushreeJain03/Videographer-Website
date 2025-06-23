@@ -8,6 +8,19 @@ $(document).ready(function () {
             });
         });
 
+
+const videos = document.querySelectorAll('.video');
+
+videos.forEach(video => {
+  video.addEventListener('mouseenter', () => {
+    video.play();
+  });
+  
+  video.addEventListener('mouseleave', () => {
+    video.pause();
+    video.currentTime = 0;
+  });
+});
 // check the window size and load the corresponding css
 // options:
 // media query
