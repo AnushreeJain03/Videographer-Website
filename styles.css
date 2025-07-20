@@ -1,0 +1,213 @@
+/* Universal selector for resetting some basic styles */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* HTML styles */
+html {
+    font-size: 24px; /* Base font size */
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+h1 {
+    font-size: clamp(2rem, 8vw, 10rem);
+}
+
+p {
+    font-size: 1rem;
+}
+
+/* Body styles */
+body {
+    background-color: rgb(240,240,240);
+    color: rgb(20,20,20);
+    font-family: "Bebas Neue", sans-serif;
+    max-width: 100%;
+    min-height: 100vh;
+    height: 100%;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.65);
+    color: white;
+    position: relative;
+    overflow:hidden;
+    min-height: 100vh;
+}
+
+#hero-text {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#hero-text p {
+    width: 60%;
+}
+
+.bg-video {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left:0;
+    width: 100dvw;
+    min-height: 100%;
+    object-fit: cover;
+}
+
+.nav {
+    width: 100%;
+}
+
+.nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 5%;
+    padding: 1%;
+}
+
+.divider {
+    width: 100%;
+    height: 20vh;
+    background: #ffffff;
+    clip-path: polygon(0% 100%, 100% 0%, 100% 100%, 0% 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    color: black;
+}
+
+.divider h1 {
+    font-size: 4vw;
+}
+
+#hero-1 {
+    display: flex;
+    background: rgba(255, 255, 255, 1);
+    color: white;
+    overflow:hidden;
+    min-height: 100vh;
+    padding: 0.5%;
+    gap: 0.5%;
+}
+
+.card {
+    flex: 1;
+    position: relative;
+    min-height: 0;
+}
+
+.card video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display:block;
+    filter: brightness(60%);
+    transition: 0.3s;
+}
+
+.card-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(0,0,0,0.7);
+    z-index: 1;
+}
+
+.card:hover video{
+    filter: brightness(100%);
+}
+
+.card-text:hover {
+    opacity: 0;
+}
+
+#hero-2 {
+    background: rgba(0, 0, 0, 1);
+    display: block;
+    columns: 2;
+    overflow:hidden;
+    height: 100vh;
+    color: white;
+}
+
+#about-text {
+    padding: 1%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+}
+
+#about-text p {
+    width: 50%;
+}
+
+#hero-2 img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#hero-3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background: rgba(255, 255, 255, 1);
+    color: black;
+    min-height: 50vh;
+}
+
+.quote {
+    border: 1px solid red;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        scale: 0.5;
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(30%);
+    transition: all 0.6s;
+}
+
+.show {
+    transform: translateY(0);
+    filter: blur(0);
+    opacity: 1;
+}
+
+@media(prefers-reduced-motion) {
+    .hidden {
+        transition: none;
+    }
+}

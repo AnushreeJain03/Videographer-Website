@@ -4,99 +4,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Loading the jquery via CDN and download should CDN be unavailable -->
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script type="text/javascript">
-    if (typeof jQuery == 'undefined') {
-        document.write(unescape("%3Cscript src='/js/jquery-3.7.1.min.js' type='text/javascript'%3E%3C/script%3E"));
-    }
-    </script>
-
     <!-- Page title -->
     <title>Joe Morikawa | Videography </title>
 
     <!-- Linking stylesheet and font embed -->
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- hamburger icon -->
+
+    <script defer src="app.js"></script>
 </head>
 
 <body>
-    <!-- nav bar code -->
-    <div id="nav-placeholder"></div>
-    <script>
-        $.get("header/nav.html", function(data){
-            $("#nav-placeholder").replaceWith(data);
-        });
-    </script>
-
-    <!-- Hero Section -->
-    <div id="hero-section">
-        
-        <video class="background-video" id="hero-bg-video" onclick="this.pause()" loop muted>
+    <div class="hero">
+        <div class="nav hidden">
+            <ul>
+                <li class="hidden">Home</li>
+                <li class="hidden">Portfolio</li>
+                <li class="hidden">Contact</li>
+            </ul>
+        </div>
+        <div class="text hidden" id="hero-text">
+            <h1>Joe Morikawa</h1>
+            <p>Professional sports videography, no respect for his friends or anyone other than himself, peaches and oranges and swift combination</p>
+        </div>
+        <div class="divider">
+            <h1 class="hidden">Portfolio</h1>
+            <p class="hidden">Scroll to Continue</p>
+        </div>
+        <video class="bg-video" id="hero-bg-video" onclick="this.pause()" autoplay loop muted>
             <source src="/assets/videos/video.mp4" type="video/mp4">
-            Your browser does not support the video tag.
         </video>
-
-        <div class="overlay"></div>
-
-        <div class="title-text-container">
-            <h1 class="title">Joe Morikawa</h1>
-            <p class="main-description">Professional Videography specialising in sport, music and lifestyle videos. Professional sports videography, no respect for his friends or anyone other than himself, peaches and oranges and swift combination</p>
+    </div>
+    <div id="hero-1">
+        <div class="card hidden">
+            <div class="card-text">Music</div>
+            <video onclick="this.pause()" onmouseover="this.play()" onmouseout="this.pause();" loop muted>
+                <source src="/assets/videos/video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </div>
-        
-    </div>
-
-    <!-- Portfolio section -->
-    <div id="portfolio-section">
-        <div class="triangle"></div>
-
-        <h1 id="portfolio-title">Portfolio</h1>
-
-        <div id="portfolio-cards-container">
-            <div class="portfolio-card">
-                <h3 id="Music">Music</h3>
-                <video onclick="this.pause()" onmouseover="this.play()" onmouseout="this.pause();" loop muted>
-                    <source src="/assets/videos/video.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-
-            <div class="portfolio-card">
-                <h3>Sport</h3>
-
-                <video onclick="this.pause()" onmouseover="this.play()" onmouseout="this.pause();" loop muted>
-                    <source src="/assets/videos/video.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-
-            <div class="portfolio-card">
-                <h3>Lifestyle</h3>
-                <video onclick="this.pause()" onmouseover="this.play()" onmouseout="this.pause();" loop muted>
-                    <source src="/assets/videos/video.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
+        <div class="card hidden">
+            <div class="card-text">Sport</div>
+            <video onclick="this.pause()" onmouseover="this.play()" onmouseout="this.pause();" loop muted>
+                <source src="/assets/videos/video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </div>
-
-        <p id="portfolio-desc-text">Professional sports videography, does lots of videos and some random text here peaches and oranges and swift combination</p>
-        <button id="portfolio-view-all-button">View All</button>
+        <div class="card hidden">
+            <div class="card-text">Lifestyle</div>
+            <video onclick="this.pause()" onmouseover="this.play()" onmouseout="this.pause();" loop muted>
+                <source src="/assets/videos/video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
     </div>
-
-    <div>
-        <h1 class="title" id="about-title">About</h1>
-        <img src="" alt="">
-        <p></p>
+    <div id="hero-2">
+        <div class="hidden" id="about-text">
+            <h1>About</h1>
+            <p>Professional sports videography, no respect for his friends or anyone other than himself, peaches and oranges and swift combination</p>
+        </div>
+        <img src="assets/images/image-1.jpg">
     </div>
-
-    <footer>
-        
-    </footer>
-
-    <script src="scripts/scripts.js"></script>
-
+    <div id="hero-3">
+        <div class="quote">
+            Professional sports videography, no respect for his friends or anyone other than himself, peaches and oranges and swift combination
+        </div>
+        <div class="quote">
+            Professional sports videography, no respect for his friends or anyone other than himself, peaches and oranges and swift combination
+        </div>
+        <div class="quote">
+            Professional sports videography, no respect for his friends or anyone other than himself, peaches and oranges and swift combination
+        </div>
+    </div>
 </body>
 </html>
