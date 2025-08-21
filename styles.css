@@ -74,7 +74,7 @@ body {
     display: flex;
     justify-content: center;
     list-style: none;
-    gap: 5%;
+    gap: 5rem;
     padding: 1%;
 }
 
@@ -92,6 +92,7 @@ body {
 
 .divider h1 {
     font-size: 4vw;
+    padding-right: 4%;
 }
 
 #hero-1 {
@@ -100,8 +101,8 @@ body {
     color: white;
     overflow:hidden;
     min-height: 100vh;
-    padding: 0.5%;
-    gap: 0.5%;
+    padding: 2%;
+    gap: 1%;
 }
 
 .card {
@@ -112,7 +113,7 @@ body {
 
 .card video{
     width: 100%;
-    height: 100%;
+    height: 80%;
     object-fit: cover;
     display:block;
     filter: brightness(60%);
@@ -121,7 +122,7 @@ body {
 
 .card-text {
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
@@ -175,11 +176,23 @@ body {
     align-items: center;
     background: rgba(255, 255, 255, 1);
     color: black;
-    min-height: 50vh;
+    min-height: 60vh;
 }
 
 .quote {
-    border: 1px solid red;
+    width: 80%;
+    border-top: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+}
+
+.quote h3 {
+    width: 30%;
+    justify-self: flex-end;
+}
+
+.quote p {
+    width: 60%;
 }
 
 @keyframes appear {

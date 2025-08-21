@@ -1,6 +1,5 @@
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-        console.log(entry)
         if (entry.isIntersecting) {
             entry.target.classList.add('show');
         } else {
@@ -11,3 +10,8 @@ const observer = new IntersectionObserver((entries) => {
 
 const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((el) => observer.observe(el));
+
+function dropdownBtn(display) {
+  document.getElementById("dropdown-content").style.display = display;
+  console.log(document.getElementById("dropdown-content"))
+}
